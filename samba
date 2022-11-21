@@ -1,0 +1,60 @@
+[global]
+    #  Server configuration parameters
+    netbios name = PIGEON
+
+    workgroup = GARDEN
+    server string = Engr Dept Server (Samba %v)
+    encrypt passwords = yes
+    security = user
+[data]
+    path = /export/smb/data
+    comment = Data Drive
+    read only = no
+[network]
+    comment = Software installation drive (I:)
+    path = /export/smb/software
+[software]
+    comment = Software installation drive (I:)
+    path = /export/smb/software
+    volume = ASVP-102-RTYUIKA
+read only = no
+writable = yes
+[global]
+    interfaces = eth1
+    bind interfaces only = yes
+    
+    
+    [global]
+security = share
+workgroup = HOME
+server string = %h server
+log file = /var/log/samba/log.%m
+max log size = 1000
+dns proxy = No
+hosts allow = 192.168.0.
+hosts deny = ALL
+printing = cups
+printcap name = cups
+
+[printers]
+path = /var/spool/samba
+printable = Yes
+browseable = No
+
+[print$]
+path = /var/lib/samba/printers
+
+[Public Directory]
+path = /Public/Files
+guest ok = yes
+read only = no
+browseable = yes
+
+[Private Directory]
+path = /private/files/
+valid users = me
+read only = yes
+browseable = no
+
+load printers = no
+
