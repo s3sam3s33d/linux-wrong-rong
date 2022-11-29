@@ -1,0 +1,6 @@
+max_connect_errors			= 3
+Skip-show-databases
+Port			=5000
+local-infile			=0
+bind-address 			= 127.0.0.1
+log			=/var/log/mysql.log
