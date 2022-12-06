@@ -1,9 +1,12 @@
 
 
-
-
-# /etc/vsftpd/vsftpd.conf
+#$https://www.tecmint.com/secure-ftp-server-using-ssl-tls-on-ubuntu/
+#$ sudo ufw allow 990/tcp
+#$ sudo ufw allow 40000:50000/tcp
+#$ sudo ufw status
+#$ sudo nano /etc/vsftpd/vsftpd.conf
 #$ systemctl restart vsftpd
+
 
 ssl_enable=YES
 ssl_tlsv1=YES
